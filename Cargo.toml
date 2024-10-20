@@ -1,6 +1,21 @@
-[package]
-name = "rustam-btc"
+[workspace]
+members = [
+    "bin/wallet",
+    "bin/miner",
+    "bin/node",
+    "crates/crypto",
+    "crates/storage",
+]
+
+resolver = "2"
+
+[workspace.package]
 version = "0.1.0"
 edition = "2021"
+authors = ["Hamid Bateni"]
+repository = "https://github.com/irnb/rustam-btc"
+keywords = ["blockchain", "bitcoin", "rust", "full-node"]
 
-[dependencies]
+[workspace.dependencies]
+crypto = { path = "crates/crypto" }
+storage = { path = "crates/storage" }

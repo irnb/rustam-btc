@@ -3,5 +3,29 @@
 version = 3
 
 [[package]]
-name = "rustam-btc"
+name = "crypto"
+version = "0.1.0"
+
+[[package]]
+name = "miner"
+version = "0.1.0"
+dependencies = [
+ "crypto",
+ "storage",
+]
+
+[[package]]
+name = "node"
+version = "0.1.0"
+dependencies = [
+ "crypto",
+ "storage",
+]
+
+[[package]]
+name = "storage"
+version = "0.1.0"
+
+[[package]]
+name = "wallet"
 version = "0.1.0"
